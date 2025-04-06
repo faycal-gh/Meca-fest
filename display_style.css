@@ -1,0 +1,193 @@
+body {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.table-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.header-section {
+    background: rgba(45, 55, 72, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #4a5568;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+    background: #5a677a;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    outline: none;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    background: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #2b6cb0;
+}
+
+.export-btn {
+    background: #38a169;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.export-btn:hover {
+    background: #2f855a;
+    transform: scale(1.05);
+}
+
+.export-btn:disabled {
+    background: #2f855a;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.table-wrapper {
+    background: rgba(45, 55, 72, 0.9);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.table-scroll {
+    max-height: 200px;    
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6366f1 #2d3748;
+}
+
+.table-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: #2d3748;
+    border-radius: 4px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 4px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+}
+
+.table-header {
+    background: #4a5568;
+    color: #a0aec0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table-row {
+    transition: all 0.3s ease;
+}
+
+.table-row:nth-child(even) {
+    background: #2d3748;
+}
+
+.table-row:hover {
+    background: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn,
+.drive-link {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.download-btn {
+    background: #3182ce;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #2b6cb0;
+    transform: scale(1.05);
+}
+
+.drive-link {
+    background: #38a169;
+    color: white;
+}
+
+.drive-link:hover {
+    background: #2f855a;
+    transform: scale(1.05);
+}
+
+.no-data {
+    background: #2d3748;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #a0aec0;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
