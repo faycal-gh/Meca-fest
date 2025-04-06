@@ -14,7 +14,7 @@
 
     <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
 
-    <link rel="stylesheet" href="style_test.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

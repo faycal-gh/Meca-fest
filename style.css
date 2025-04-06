@@ -1,0 +1,279 @@
+@import url(https://db.onlinewebfonts.com/c/0a9c55380b7864dd0c077c40625434e1?family=Thirteen+Pixel+Fonts+Regular);
+
+:root {
+    --content-padding: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    height: 100vh;
+    background-color: #252525;
+    /* overflow: hidden; */
+}
+
+.parent-container {
+    height: 100vh;
+    background-color: #25252500;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.content .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 250%;
+}
+
+.slogan {
+    width: 100%;
+}
+
+.slogan div:nth-child(1) {
+    font-family: 'ArcadeClassic', sans-serif;
+}
+
+.slogan div:nth-child(2) {
+    font-family: "Thirteen Pixel Fonts Regular";
+    width: 50%;
+}
+
+.content .titles h2,
+.content .titles h4 {
+    /* font-family: "Press Start 2P", system-ui; */
+    font-family: 'ArcadeClassic', sans-serif;
+    /* font-family: "Thirteen Pixel Fonts Regular"; */
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+.content .titles h4 {
+    font-family: "Thirteen Pixel Fonts Regular";
+    font-size: 2.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-fest {
+    display: flex;
+    align-items: center;
+}
+
+.logo-fest .lightbulb {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
+
+.features {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(18, 18, 18, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.feature-item {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.feature-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.feature-text {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    background-color: rgba(50, 50, 50, 0.5);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.5rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.partners {
+    display: flex;
+    align-items: center;
+}
+
+.tagline,
+.partners span {
+    font-family: 'ArcadeClassic', sans-serif;
+    font-weight: 200;
+}
+
+.partners span {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.registration-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+
+
+
+
+.next-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    /* height: 400px; */
+    height: fit-content;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.upload-icon .upload-image:hover {
+    cursor: pointer;
+}
+
+
+/* this code supposed to be in style tag in the html code */
+.custom-bg {
+    background-color: rgb(31, 41, 55, 0.5) !important;
+    border: 1px solid white;
+
+}
+
+.custom-font {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5rem;
+    font-size: 0.7rem;    
+}
+
+/* .registration-form p,
+.registration-form  h2, .registration-form label, .registration-form input {
+font-size: 1.1rem;
+letter-spacing: 1px;
+font-family: "Press Start 2P", system-ui;                    
+font-weight: 400;
+font-style: normal;
+line-height: 1.5rem;
+font-size: 0.7rem;
+} 
+*/
+
+
+
+
+@media (max-width: 768px) {
+
+    .header,
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo,
+    .logo-fest {
+        margin-bottom: 1rem;
+    }
+
+    .features {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-form {
+        width: 90%;
+        height: 70%;
+        overflow: auto;
+    }
+
+    .next-section {
+        width: calc(100% - calc(2 * var(--content-padding)));
+    }
+
+    .button-container {
+        width: 100% !important;
+    }
+}
